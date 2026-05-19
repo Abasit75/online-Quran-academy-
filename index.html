@@ -3,330 +3,379 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Online Quran Teaching Academy</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#021d1a;
-  color:#fff;
-  overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+background:#021d1a;
+color:#fff;
+overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
+text-decoration:none;
 }
 
 .container{
-  width:90%;
-  max-width:1300px;
-  margin:auto;
+width:90%;
+max-width:1300px;
+margin:auto;
 }
 
 header{
-  background:#031614;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+background:#031614;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .logo-icon{
-  width:55px;
-  height:55px;
-  border:2px solid #d4a437;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#d4a437;
-  font-size:24px;
+width:55px;
+height:55px;
+border:2px solid #d4a437;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#d4a437;
+font-size:24px;
 }
 
 .logo h2{
-  font-family:'Cinzel',serif;
-  color:#f5c24b;
-  font-size:26px;
+font-family:'Cinzel',serif;
+color:#f5c24b;
+font-size:26px;
 }
 
 .logo p{
-  font-size:13px;
-  color:#ddd;
+font-size:13px;
+color:#ddd;
 }
 
 .menu{
-  display:flex;
-  gap:25px;
+display:flex;
+gap:25px;
 }
 
 .menu a{
-  color:#fff;
+color:#fff;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#f5c24b;
 }
 
 .phone-btn{
-  background:#d4a437;
-  color:#000;
-  padding:12px 22px;
-  border-radius:10px;
-  font-weight:600;
+background:#d4a437;
+color:#000;
+padding:12px 22px;
+border-radius:10px;
+font-weight:600;
 }
 
 .hero{
-  padding:90px 0;
-  background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-  url('https://images.unsplash.com/photo-1542816417-0983670d7564?q=80&w=1400&auto=format&fit=crop') center/cover;
+padding:100px 0;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1542816417-0983670d7564?q=80&w=1400&auto=format&fit=crop') center/cover;
 }
 
 .hero-content{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
 .hero-text h4{
-  color:#f5c24b;
-  letter-spacing:3px;
-  margin-bottom:15px;
+color:#f5c24b;
+letter-spacing:3px;
+margin-bottom:15px;
 }
 
 .hero-text h1{
-  font-size:65px;
-  line-height:1.1;
-  font-family:'Cinzel',serif;
-  margin-bottom:20px;
+font-size:65px;
+line-height:1.1;
+font-family:'Cinzel',serif;
+margin-bottom:20px;
 }
 
 .hero-text span{
-  color:#f5c24b;
+color:#f5c24b;
 }
 
 .hero-text p{
-  color:#ddd;
-  line-height:1.8;
-  margin-bottom:30px;
+color:#ddd;
+line-height:1.9;
+margin-bottom:30px;
+font-size:18px;
 }
 
 .buttons{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
-  padding:15px 28px;
-  border-radius:10px;
-  font-weight:600;
-  display:inline-block;
+padding:15px 28px;
+border-radius:10px;
+font-weight:600;
+display:inline-block;
 }
 
 .btn-primary{
-  background:#d4a437;
-  color:#000;
+background:#d4a437;
+color:#000;
 }
 
 .btn-outline{
-  border:2px solid #d4a437;
-  color:#f5c24b;
+border:2px solid #d4a437;
+color:#f5c24b;
 }
 
 .hero-image img{
-  width:100%;
-  border-radius:25px;
-  border:4px solid #d4a437;
+width:100%;
+border-radius:25px;
+border:4px solid #d4a437;
 }
 
-.features{
-  background:#fff;
-  color:#000;
-  padding:60px 0;
+.features,
+.testimonials,
+.pricing{
+padding:90px 0;
+background:#fff;
+color:#000;
 }
 
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:25px;
-  text-align:center;
+.feature-grid,
+.testimonial-grid,
+.price-grid,
+.teacher-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.feature-box{
-  padding:20px;
+.feature-box,
+.testimonial-card,
+.price-card,
+.teacher-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .feature-icon{
-  width:80px;
-  height:80px;
-  background:#021d1a;
-  color:#f5c24b;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:auto;
-  font-size:32px;
-  margin-bottom:15px;
-}
-
-.courses{
-  padding:90px 0;
+width:80px;
+height:80px;
+background:#021d1a;
+color:#f5c24b;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+font-size:32px;
+margin-bottom:15px;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:60px;
+text-align:center;
+margin-bottom:60px;
 }
 
 .section-title h2{
-  font-family:'Cinzel',serif;
-  color:#f5c24b;
-  font-size:48px;
+font-family:'Cinzel',serif;
+font-size:48px;
+color:#f5c24b;
+margin-bottom:15px;
+}
+
+.courses,
+.teachers{
+padding:90px 0;
 }
 
 .course-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
 }
 
 .course-card{
-  background:#fff;
-  color:#000;
-  border-radius:20px;
-  overflow:hidden;
+background:#fff;
+color:#000;
+border-radius:20px;
+overflow:hidden;
 }
 
 .course-top{
-  background:#042925;
-  color:#f5c24b;
-  font-size:45px;
-  text-align:center;
-  padding:30px;
+background:#042925;
+color:#f5c24b;
+font-size:45px;
+text-align:center;
+padding:30px;
 }
 
 .course-body{
-  padding:25px;
-  text-align:center;
+padding:25px;
+text-align:center;
 }
 
-.course-body h3{
-  margin-bottom:15px;
+.teacher-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.price-card h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.price-card h1{
+color:#d4a437;
+margin-bottom:20px;
+}
+
+.price-card p{
+margin-bottom:12px;
 }
 
 .registration{
-  padding:90px 0;
-  background:#fff;
-  color:#000;
+padding:90px 0;
+background:#fff;
+color:#000;
 }
 
 .form-box{
-  max-width:700px;
-  margin:auto;
-  background:#f7f7f7;
-  padding:50px;
-  border-radius:20px;
+max-width:700px;
+margin:auto;
+background:#f7f7f7;
+padding:50px;
+border-radius:20px;
 }
 
 .form-box h2{
-  text-align:center;
-  margin-bottom:30px;
-  font-family:'Cinzel',serif;
+text-align:center;
+margin-bottom:30px;
+font-family:'Cinzel',serif;
 }
 
 .form-group{
-  margin-bottom:20px;
+margin-bottom:20px;
 }
 
 .form-group input,
 .form-group select{
-  width:100%;
-  padding:16px;
-  border:1px solid #ccc;
-  border-radius:10px;
+width:100%;
+padding:16px;
+border:1px solid #ccc;
+border-radius:10px;
 }
 
 .submit-btn{
-  width:100%;
-  padding:18px;
-  border:none;
-  border-radius:10px;
-  background:#d4a437;
-  font-size:18px;
-  font-weight:600;
-  cursor:pointer;
+width:100%;
+padding:18px;
+border:none;
+border-radius:10px;
+background:#d4a437;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
 }
 
 footer{
-  background:#031614;
-  padding:70px 0 20px;
+background:#031614;
+padding:70px 0 20px;
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
 }
 
 .footer-col h3{
-  color:#f5c24b;
-  margin-bottom:20px;
+color:#f5c24b;
+margin-bottom:20px;
 }
 
 .footer-col p,
 .footer-col a{
-  color:#ddd;
-  line-height:2;
-  display:block;
+color:#ddd;
+line-height:2;
+display:block;
 }
 
 .copyright{
-  text-align:center;
-  margin-top:40px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  padding-top:20px;
-  color:#bbb;
+text-align:center;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
+color:#bbb;
+}
+
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+z-index:999;
 }
 
 @media(max-width:992px){
-
-  .hero-content{
-    grid-template-columns:1fr;
-  }
-
-  .menu{
-    display:none;
-  }
-
-  .hero-text h1{
-    font-size:45px;
-  }
+.hero-content{
+grid-template-columns:1fr;
 }
 
+.menu{
+display:none;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+}
 </style>
 </head>
 
@@ -334,12 +383,10 @@ footer{
 
 <header>
 <div class="container">
-
 <nav>
 
 <div class="logo">
 <div class="logo-icon">☪</div>
-
 <div>
 <h2>Online Quran</h2>
 <p>Teaching Academy</p>
@@ -348,10 +395,10 @@ footer{
 
 <div class="menu">
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Courses</a>
-<a href="#">Teachers</a>
-<a href="#">Contact</a>
+<a href="#courses">Courses</a>
+<a href="#teachers">Teachers</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
 </div>
 
 <a href="tel:+923437353621" class="phone-btn">
@@ -363,37 +410,22 @@ footer{
 </header>
 
 <section class="hero">
-
 <div class="container">
-
 <div class="hero-content">
 
 <div class="hero-text">
-
 <h4>WELCOME TO</h4>
-
-<h1>
-Online Quran
-<span>Teaching Academy</span>
-</h1>
+<h1>Online Quran <span>Teaching Academy</span></h1>
 
 <p>
 Learn Quran online with qualified male & female teachers.
-Tajweed, Hifz, Islamic Studies and Arabic courses for kids and adults.
+Flexible timings, Tajweed, Hifz and Islamic Studies.
 </p>
 
 <div class="buttons">
-
-<a href="#registration" class="btn btn-primary">
-Enroll Now
-</a>
-
-<a href="https://wa.me/923437353621" target="_blank" class="btn btn-outline">
-WhatsApp Now
-</a>
-
+<a href="#registration" class="btn btn-primary">Enroll Now</a>
+<a href="https://wa.me/923437353621" target="_blank" class="btn btn-outline">WhatsApp Now</a>
 </div>
-
 </div>
 
 <div class="hero-image">
@@ -405,8 +437,11 @@ WhatsApp Now
 </section>
 
 <section class="features">
-
 <div class="container">
+
+<div class="section-title">
+<h2>Why Choose Us</h2>
+</div>
 
 <div class="feature-grid">
 
@@ -417,7 +452,7 @@ WhatsApp Now
 
 <div class="feature-box">
 <div class="feature-icon">👨‍🏫</div>
-<h3>Male & Female Teachers</h3>
+<h3>Certified Teachers</h3>
 </div>
 
 <div class="feature-box">
@@ -426,12 +461,7 @@ WhatsApp Now
 </div>
 
 <div class="feature-box">
-<div class="feature-icon">⏰</div>
-<h3>Flexible Timings</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">📜</div>
+<div class="feature-icon">🎓</div>
 <h3>Certificates</h3>
 </div>
 
@@ -439,8 +469,7 @@ WhatsApp Now
 </div>
 </section>
 
-<section class="courses">
-
+<section class="courses" id="courses">
 <div class="container">
 
 <div class="section-title">
@@ -453,15 +482,15 @@ WhatsApp Now
 <div class="course-top">📖</div>
 <div class="course-body">
 <h3>Quran Reading</h3>
-<p>Learn Noorani Qaida & Quran with Tajweed.</p>
+<p>Learn Noorani Qaida with Tajweed.</p>
 </div>
 </div>
 
 <div class="course-card">
 <div class="course-top">☪</div>
 <div class="course-body">
-<h3>Tajweed</h3>
-<p>Learn Quran with proper Tajweed rules.</p>
+<h3>Tajweed Course</h3>
+<p>Proper pronunciation & recitation.</p>
 </div>
 </div>
 
@@ -469,7 +498,7 @@ WhatsApp Now
 <div class="course-top">📚</div>
 <div class="course-body">
 <h3>Hifz-ul-Quran</h3>
-<p>Memorize Quran with easy methods.</p>
+<p>Complete Quran memorization.</p>
 </div>
 </div>
 
@@ -477,7 +506,7 @@ WhatsApp Now
 <div class="course-top">🕌</div>
 <div class="course-body">
 <h3>Islamic Studies</h3>
-<p>Learn Hadith, Seerah & Aqeedah.</p>
+<p>Hadith, Seerah & Aqeedah.</p>
 </div>
 </div>
 
@@ -485,12 +514,112 @@ WhatsApp Now
 </div>
 </section>
 
-<section class="registration" id="registration">
+<section class="teachers" id="teachers">
+<div class="container">
 
+<div class="section-title">
+<h2>Our Teachers</h2>
+</div>
+
+<div class="teacher-grid">
+
+<div class="teacher-card">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop">
+<h3>Qari Abdullah</h3>
+<p>10 Years Experience</p>
+</div>
+
+<div class="teacher-card">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+<h3>Teacher Ayesha</h3>
+<p>Female Quran Teacher</p>
+</div>
+
+<div class="teacher-card">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop">
+<h3>Mufti Hamza</h3>
+<p>Islamic Scholar</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<div class="container">
+
+<div class="section-title">
+<h2>Fee Plans</h2>
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+<h3>Basic</h3>
+<h1>$30</h1>
+<p>3 Classes Weekly</p>
+<p>30 Minutes</p>
+<p>Basic Quran Reading</p>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<h1>$50</h1>
+<p>5 Classes Weekly</p>
+<p>Tajweed Included</p>
+<p>Flexible Timing</p>
+</div>
+
+<div class="price-card">
+<h3>Hifz Plan</h3>
+<h1>$80</h1>
+<p>Daily Classes</p>
+<p>Memorization Plan</p>
+<p>Monthly Tests</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="testimonials">
+<div class="container">
+
+<div class="section-title">
+<h2>Parents Reviews</h2>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+<p>
+Excellent teachers and flexible timings.
+</p>
+<h4>- Ahmed Khan</h4>
+</div>
+
+<div class="testimonial-card">
+<p>
+My kids improved Tajweed very quickly.
+</p>
+<h4>- Fatima Ali</h4>
+</div>
+
+<div class="testimonial-card">
+<p>
+Highly recommended Quran academy.
+</p>
+<h4>- Usman Tariq</h4>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="registration" id="registration">
 <div class="container">
 
 <div class="form-box">
-
 <h2>Student Registration</h2>
 
 <form onsubmit="sendToWhatsApp(); return false;">
@@ -517,15 +646,6 @@ WhatsApp Now
 </select>
 </div>
 
-<div class="form-group">
-<select id="age">
-<option>Select Age</option>
-<option>5-10 Years</option>
-<option>10-18 Years</option>
-<option>18+ Years</option>
-</select>
-</div>
-
 <button type="submit" class="submit-btn">
 Register Now
 </button>
@@ -536,8 +656,7 @@ Register Now
 </div>
 </section>
 
-<footer>
-
+<footer id="contact">
 <div class="container">
 
 <div class="footer-grid">
@@ -545,81 +664,58 @@ Register Now
 <div class="footer-col">
 <h3>Online Quran Academy</h3>
 <p>
-Our mission is to spread the light of Quran and Sunnah through quality online education.
+Quality Quran education worldwide.
 </p>
 </div>
 
 <div class="footer-col">
 <h3>Quick Links</h3>
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Courses</a>
-<a href="#">Teachers</a>
+<a href="#courses">Courses</a>
+<a href="#teachers">Teachers</a>
 </div>
 
 <div class="footer-col">
 <h3>Contact</h3>
-
-<a href="tel:+923437353621">
-03437353621
-</a>
-
-<a href="https://wa.me/923437353621" target="_blank">
-WhatsApp Support
-</a>
-
+<a href="tel:+923437353621">03437353621</a>
+<a href="https://wa.me/923437353621" target="_blank">WhatsApp Support</a>
 <p>info@onlinequranacademy.com</p>
-
-</div>
-
-<div class="footer-col">
-<h3>Newsletter</h3>
-<p>Subscribe for latest updates.</p>
-
-<br>
-
-<a href="https://wa.me/923437353621" target="_blank" class="phone-btn">
-WhatsApp Now
-</a>
-
 </div>
 
 </div>
 
 <div class="copyright">
-© 2024 Online Quran Teaching Academy. All Rights Reserved.
+© 2024 Online Quran Teaching Academy
 </div>
 
 </div>
-
 </footer>
 
-<script>
+<a href="https://wa.me/923437353621" class="floating-whatsapp" target="_blank">
+💬
+</a>
 
+<script>
 function sendToWhatsApp(){
 
 let student = document.getElementById("student").value;
 let parent = document.getElementById("parent").value;
 let number = document.getElementById("number").value;
 let course = document.getElementById("course").value;
-let age = document.getElementById("age").value;
 
 let message =
 "New Student Registration%0A%0A" +
 "Student Name: " + student + "%0A" +
 "Parent Name: " + parent + "%0A" +
 "WhatsApp Number: " + number + "%0A" +
-"Course: " + course + "%0A" +
-"Age: " + age;
+"Course: " + course;
 
 let url =
 "https://wa.me/923437353621?text=" + message;
 
 window.open(url, "_blank");
-
 }
-
 </script>
 
 </body>
-</html>
+  </html>
