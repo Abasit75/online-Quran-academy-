@@ -583,7 +583,7 @@
 
 <section class="registration">
   <div class="container">
-<script>
+<script><form onsubmit="sendToWhatsApp(); return false;">
 function sendToWhatsApp() {
 
   let student = document.querySelector('input[placeholder=\"Student Name\"]').value;
@@ -663,7 +663,26 @@ WhatsApp Number: ${number}`;
         <a href="#">About</a>
         <a href="#">Courses</a>
         <a href="#">Teachers</a>
-      </div>
+      </div><script>
+function sendToWhatsApp() {
+
+  let student = document.querySelector('input[placeholder="Student Name"]').value;
+  let parent = document.querySelector('input[placeholder="Parent Name"]').value;
+  let number = document.querySelector('input[placeholder="WhatsApp Number"]').value;
+
+  let message =
+`New Student Registration
+
+Student Name: ${student}
+Parent Name: ${parent}
+WhatsApp Number: ${number}`;
+
+  let whatsappURL =
+"https://wa.me/923437353621?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+}
+      </script>
 
       <div class="footer-col">
         <h3>Contact</h3>
