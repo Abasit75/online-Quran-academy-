@@ -3,505 +3,283 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Quran Teaching Academy</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Online Quran Academy</title>
 
 <style>
-*{.testimonial-card{
-    background:#ffffff;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
-    text-align:center;
-}
 
-.testimonial-card:hover{
-    transform:translateY(-5px);
-}
-
-.testimonial-card p{
-    font-size:16px;
-    line-height:1.7;
-    color:#444;
-}
-
-.testimonial-card h4{
-    margin-top:15px;
-    color:#0d6efd;
-}
-
-.stars{
-    color:gold;
-    font-size:20px;
-    margin-top:10px;
-}
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    font-family:Arial, sans-serif;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#021d1a;
-color:#fff;
-overflow-x:hidden;
-}
-<div class="logo">
-   <div class="logo-icon">
-      <img src="logo.png" alt="Logo">
-   </div>
-
-   <div class="logo-text">
-      <h2>Online Quran Academy</h2>
-      <p>Learn Quran Online</p>
-   </div>
-</div>
-a{
-text-decoration:none;
+    background:#021b1b;
+    color:white;
 }
 
-.container{
-width:90%;
-max-width:1300px;
-margin:auto;
-}
+/* HEADER */
 
 header{
-background:#031614;
-position:sticky;
-top:0;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
+    width:100%;
+    background:#032626;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    padding:15px 20px;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-.teacher-card{
-    height:auto;
-    padding:20px;
-    text-align:center;
-}
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-}
-.teacher-card{
-    height:auto;
-    padding:20px;
-    text-align:center;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
-.teacher-card h3{
-    color:#000;
-    font-size:28px;
-    margin-top:20px;
-    font-weight:bold;
-}
-
-.teacher-card p{
-    color:#333;
-    font-size:18px;
-    margin-top:10px;
-}
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:15px;
 }
 
-.logo-icon img{
-   width:70px;
-   height:70px;
-   border-radius:14px;
-   object-fit:cover;
-   border:2px solid #d4a437;
-   background:white;
-   padding:3px;
-}
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:15px;
+    object-fit:cover;
+    border:3px solid #d4a437;
+    background:white;
+    padding:3px;
 }
 
 .logo-text h2{
-    margin:0;
-    font-size:20px;
+    font-size:38px;
     color:white;
 }
 
 .logo-text p{
-    margin:0;
-    font-size:12px;
-    color:#d4a437;
-}
-
-}
-
-.logo h2{
-font-family:'Cinzel',serif;
-color:#f5c24b;
-font-size:26px;
-}
-
-.logo p{
-font-size:13px;
-color:#ddd;
-}
-
-.menu{
-display:flex;
-gap:25px;
-}
-
-.menu a{
-color:#fff;
-transition:0.3s;
-}
-
-.menu a:hover{
-color:#f5c24b;
+    color:#ddd;
+    font-size:20px;
+    margin-top:5px;
 }
 
 .phone-btn{
-background:#d4a437;
-color:#000;
-padding:12px 22px;
-border-radius:10px;
-font-weight:600;
+    background:#d4a437;
+    color:black;
+    padding:18px 30px;
+    border-radius:15px;
+    font-size:22px;
+    font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
-padding:100px 0;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1542816417-0983670d7564?q=80&w=1400&auto=format&fit=crop') center/cover;
+    padding:80px 20px;
 }
 
 .hero-content{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.hero-text h4{
-color:#f5c24b;
-letter-spacing:3px;
-margin-bottom:15px;
-}
-
-.hero-text h1{
-font-size:65px;
-line-height:1.1;
-font-family:'Cinzel',serif;
-margin-bottom:20px;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
 .hero-text span{
-color:#f5c24b;
-}
-
-.hero-text p{
-color:#ddd;
-line-height:1.9;
-margin-bottom:30px;
-font-size:18px;
-}
-
-.buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:15px 28px;
-border-radius:10px;
-font-weight:600;
-display:inline-block;
-}
-
-.btn-primary{
-background:#d4a437;
-color:#000;
-}
-
-.btn-outline{
-border:2px solid #d4a437;
-color:#f5c24b;
-}
-
-.hero-image img{
-width:100%;
-border-radius:25px;
-border:4px solid #d4a437;
-}
-
-.features,
-.testimonials,
-.pricing{
-padding:90px 0;
-background:#fff;
-color:#000;
-}
-
-.feature-grid,
-.testimonial-grid,
-.price-grid,
-.teacher-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.feature-box,
-.testimonial-card,
-.price-card,
-.teacher-card{
-background:#fff;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.feature-icon{
-width:80px;
-height:80px;
-background:#021d1a;
-color:#f5c24b;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-font-size:32px;
-margin-bottom:15px;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title h2{
-font-family:'Cinzel',serif;
-font-size:48px;
-color:#f5c24b;
-margin-bottom:15px;
-}
-
-.courses,
-.teachers{
-padding:90px 0;
-}
-
-.course-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-}
-
-.course-card{
-background:#fff;
-color:#000;
-border-radius:20px;
-overflow:hidden;
-}
-
-.course-top{
-background:#042925;
-color:#f5c24b;
-font-size:45px;
-text-align:center;
-padding:30px;
-}
-
-.course-body{
-padding:25px;
-text-align:center;
-}
-
-.teacher-card img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-margin-bottom:15px;
-}
-
-.price-card h3{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.price-card h1{
-color:#d4a437;
-margin-bottom:20px;
-}
-
-.price-card p{
-margin-bottom:12px;
-}
-
-.registration{
-padding:90px 0;
-background:#fff;
-color:#000;
-}
-
-.form-box{
-max-width:700px;
-margin:auto;
-background:#f7f7f7;
-padding:50px;
-border-radius:20px;
-}
-
-.form-box h2{
-text-align:center;
-margin-bottom:30px;
-font-family:'Cinzel',serif;
-}
-
-.form-group{
-margin-bottom:20px;
-}
-
-.form-group input,
-.form-group select{
-width:100%;
-padding:16px;
-border:1px solid #ccc;
-border-radius:10px;
-}
-
-.submit-btn{
-width:100%;
-padding:18px;
-border:none;
-border-radius:10px;
-background:#d4a437;
-font-size:18px;
-font-weight:600;
-cursor:pointer;
-}
-
-footer{
-background:#031614;
-padding:70px 0 20px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-}
-
-.footer-col h3{
-color:#f5c24b;
-margin-bottom:20px;
-}
-
-.footer-col p,
-.footer-col a{
-color:#ddd;
-line-height:2;
-display:block;
-}
-
-.copyright{
-text-align:center;
-margin-top:40px;
-border-top:1px solid rgba(255,255,255,0.1);
-padding-top:20px;
-color:#bbb;
-}
-
-.floating-whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-z-index:999;
-}
-
-@media(max-width:992px){
-.hero-content{
-grid-template-columns:1fr;
-}
-
-.menu{
-display:none;
+    color:#d4a437;
+    letter-spacing:5px;
+    font-weight:bold;
+    font-size:20px;
 }
 
 .hero-text h1{
-font-size:42px;
+    font-size:80px;
+    line-height:1.1;
+    margin:20px 0;
+    font-family:serif;
 }
+
+.hero-text h1 span{
+    color:#d4a437;
 }
+
+.hero-text p{
+    color:#ddd;
+    font-size:26px;
+    line-height:1.8;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.btn1{
+    background:#d4a437;
+    color:black;
+    padding:18px 35px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.btn2{
+    border:2px solid #d4a437;
+    color:#d4a437;
+    padding:18px 35px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:25px;
+    border:4px solid #d4a437;
+}
+
+/* WHY CHOOSE US */
+
+.features{
+    background:#f4f4f4;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.features h2{
+    font-size:60px;
+    color:#d4a437;
+    margin-bottom:60px;
+    font-family:serif;
+}
+
+.feature-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.box{
+    background:white;
+    padding:40px 20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.icon{
+    width:90px;
+    height:90px;
+    background:#032626;
+    color:#d4a437;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.box h3{
+    color:black;
+    font-size:28px;
+}
+
+.box p{
+    color:#555;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-content{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:55px;
+}
+
+.logo-text h2{
+    font-size:26px;
+}
+
+.logo-text p{
+    font-size:16px;
+}
+
+.phone-btn{
+    font-size:18px;
+    padding:14px 20px;
+}
+
+.hero-text p{
+    font-size:20px;
+}
+
+.features h2{
+    font-size:45px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
-<div class="logo">
-   <div class="logo-icon">
-      <img src="logo.png" alt="Logo">
-   </div>
 
-   <div class="logo-text">
-      <h2>Online Quran Academy</h2>
-      <p>Learn Quran Online</p>
-   </div>
-</div>
+<!-- HEADER -->
+
 <header>
-<div class="container">
-<nav>
+
+<div class="navbar">
 
 <div class="logo">
-<div class="logo-icon">☪</div>
-<div>
-<h2>Online Quran</h2>
-<p>Teaching Academy</p>
-</div>
+
+<!-- APNA LOGO IMAGE YAHAN -->
+<img src="logo.png" alt="Logo">
+
+<div class="logo-text">
+<h2>Online Quran Academy</h2>
+<p>Learn Quran Online</p>
 </div>
 
-<div class="menu">
-<a href="#">Home</a>
-<a href="#courses">Courses</a>
-<a href="#teachers">Teachers</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
 </div>
 
-<a href="tel:+923437353621" class="phone-btn">
+<a href="tel:03437353621" class="phone-btn">
 03437353621
 </a>
 
-</nav>
 </div>
+
 </header>
 
+<!-- HERO SECTION -->
+
 <section class="hero">
-<div class="container">
+
 <div class="hero-content">
 
 <div class="hero-text">
-<h4>WELCOME TO</h4>
-<h1>Online Quran <span>Teaching Academy</span></h1>
+
+<span>WELCOME TO</span>
+
+<h1>
+ONLINE QURAN
+<span>TEACHING</span>
+ACADEMY
+</h1>
 
 <p>
 Learn Quran online with qualified male & female teachers.
@@ -509,307 +287,62 @@ Flexible timings, Tajweed, Hifz and Islamic Studies.
 </p>
 
 <div class="buttons">
-<a href="#registration" class="btn btn-primary">Enroll Now</a>
-<a href="https://wa.me/923437353621" target="_blank" class="btn btn-outline">WhatsApp Now</a>
+
+<a href="#" class="btn1">Enroll Now</a>
+
+<a href="https://wa.me/923437353621" class="btn2">
+WhatsApp Now
+</a>
+
 </div>
+
 </div>
 
 <div class="hero-image">
-<img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?q=80&w=1400&auto=format&fit=crop" alt="Quran">
+
 </div>
 
 </div>
-</div>
+
 </section>
+
+<!-- FEATURES -->
 
 <section class="features">
-<div class="container">
 
-<div class="section-title">
 <h2>Why Choose Us</h2>
-</div>
 
-<div class="feature-grid">
+<div class="feature-boxes">
 
-<div class="feature-box">
-<div class="feature-icon">📖</div>
+<div class="box">
+<div class="icon">📖</div>
 <h3>One to One Classes</h3>
+<p>Personal Quran learning sessions.</p>
 </div>
 
-<div class="feature-box">
-<div class="feature-icon">👨‍🏫</div>
+<div class="box">
+<div class="icon">👨‍🏫</div>
 <h3>Certified Teachers</h3>
+<p>Experienced male & female tutors.</p>
 </div>
 
-<div class="feature-box">
-<div class="feature-icon">🕌</div>
+<div class="box">
+<div class="icon">🕌</div>
 <h3>Islamic Courses</h3>
+<p>Tajweed, Hifz and Islamic Studies.</p>
 </div>
 
-<div class="feature-box">
-<div class="feature-icon">🎓</div>
-<h3>Certificates</h3>
+<div class="box">
+<div class="icon">🎓</div>
+<h3>Flexible Timings</h3>
+<p>Choose your own class timings.</p>
 </div>
 
 </div>
-</div>
+
 </section>
-
-<section class="courses" id="courses">
-<div class="container">
-
-<div class="section-title">
-<h2>Our Courses</h2>
-</div>
-
-<div class="course-grid">
-
-<div class="course-card">
-<div class="course-top">📖</div>
-<div class="course-body">
-<h3>Quran Reading</h3>
-<p>Learn Noorani Qaida with Tajweed.</p>
-</div>
-</div>
-
-<div class="course-card">
-<div class="course-top">☪</div>
-<div class="course-body">
-<h3>Tajweed Course</h3>
-<p>Proper pronunciation & recitation.</p>
-</div>
-</div>
-
-<div class="course-card">
-<div class="course-top">📚</div>
-<div class="course-body">
-<h3>Hifz-ul-Quran</h3>
-<p>Complete Quran memorization.</p>
-</div>
-</div>
-
-<div class="course-card">
-<div class="course-top">🕌</div>
-<div class="course-body">
-<h3>Islamic Studies</h3>
-<p>Hadith, Seerah & Aqeedah.</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="teachers" id="teachers">
-<div class="container">
-
-<div class="section-title">
-<h2>Our Teachers</h2>
-</div>
-
-<div class="teacher-grid">
-
-<div class="teacher-card">
-<img src="IMG-20250123-WA0012.jpg">
-<h3>Molana Mumtaz Ahmed</h3>
-<p>10 Years Experience</p>
-</div>
-
-<div class="teacher-card">
-<img src="40b0ba995fe3e13307c546b8c72f19af_0.jpeg">
-<h3>Molana Abdul Basit</h3>
-<p>Expert Quran Teacher</p>
-</div>
-
-<div class="teacher-card">
-<img src="FB_IMG_1779215620404.jpg">
-<h3>Molana Muhammad Naeem</h3>
-<p>Islamic Scholar</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="pricing" id="pricing">
-<div class="container">
-
-<div class="section-title">
-<h2>Fee Plans</h2>
-</div>
-
-<div class="price-grid">
-
-<div class="price-card">
-<h3>Basic</h3>
-<h1>$30</h1>
-<p>3 Classes Weekly</p>
-<p>30 Minutes</p>
-<p>Basic Quran Reading</p>
-</div>
-
-<div class="price-card">
-<h3>Premium</h3>
-<h1>$50</h1>
-<p>5 Classes Weekly</p>
-<p>Tajweed Included</p>
-<p>Flexible Timing</p>
-</div>
-
-<div class="price-card">
-<h3>Hifz Plan</h3>
-<h1>$80</h1>
-<p>Daily Classes</p>
-<p>Memorization Plan</p>
-<p>Monthly Tests</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="testimonials">
-<div class="container">
-
-<div class="section-title">
-<h2>Parents Reviews</h2>
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-    <p>
-    "Excellent Quran teachers and very flexible timings.
-    My children improved their Quran reading quickly."
-    </p>
-    <h4>- Ahmed Family</h4>
-    <div class="stars">★★★★★</div>
-</div>
-
-<div class="testimonial-card">
-    <p>
-    "Highly professional academy with experienced teachers.
-    We are very satisfied with the teaching quality."
-    </p>
-    <h4>- Fatima Parent</h4>
-    <div class="stars">★★★★★</div>
-</div>
-
-<div class="testimonial-card">
-    <p>
-    "Best online Quran classes for kids and adults.
-    Friendly environment and excellent support."
-    </p>
-    <h4>- Usman Ali</h4>
-    <div class="stars">★★★★★</div>
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="registration" id="registration">
-<div class="container">
-
-<div class="form-box">
-<h2>Student Registration</h2>
-
-<form onsubmit="sendToWhatsApp(); return false;">
-
-<div class="form-group">
-<input type="text" id="student" placeholder="Student Name" required>
-</div>
-
-<div class="form-group">
-<input type="text" id="parent" placeholder="Parent Name" required>
-</div>
-
-<div class="form-group">
-<input type="text" id="number" placeholder="WhatsApp Number" required>
-</div>
-
-<div class="form-group">
-<select id="course">
-<option>Select Course</option>
-<option>Quran Reading</option>
-<option>Tajweed</option>
-<option>Hifz-ul-Quran</option>
-<option>Islamic Studies</option>
-</select>
-</div>
-
-<button type="submit" class="submit-btn">
-Register Now
-</button>
-
-</form>
-
-</div>
-</div>
-</section>
-
-<footer id="contact">
-<div class="container">
-
-<div class="footer-grid">
-
-<div class="footer-col">
-<h3>Online Quran Academy</h3>
-<p>
-Quality Quran education worldwide.
-</p>
-</div>
-
-<div class="footer-col">
-<h3>Quick Links</h3>
-<a href="#">Home</a>
-<a href="#courses">Courses</a>
-<a href="#teachers">Teachers</a>
-</div>
-
-<div class="footer-col">
-<h3>Contact</h3>
-<a href="tel:+923437353621">03437353621</a>
-<a href="https://wa.me/923437353621" target="_blank">WhatsApp Support</a>
-<p>info@onlinequranacademy.com</p>
-</div>
-
-</div>
-
-<div class="copyright">
-© 2024 Online Quran Teaching Academy
-</div>
-
-</div>
-</footer>
-
-<a href="https://wa.me/923437353621" class="floating-whatsapp" target="_blank">
-💬
-</a>
-
-<script>
-function sendToWhatsApp(){
-
-let student = document.getElementById("student").value;
-let parent = document.getElementById("parent").value;
-let number = document.getElementById("number").value;
-let course = document.getElementById("course").value;
-
-let message =
-"New Student Registration%0A%0A" +
-"Student Name: " + student + "%0A" +
-"Parent Name: " + parent + "%0A" +
-"WhatsApp Number: " + number + "%0A" +
-"Course: " + course;
-
-let url =
-"https://wa.me/923437353621?text=" + message;
-
-window.open(url, "_blank");
-}
-</script>
 
 </body>
-  </html>
+</html>
