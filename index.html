@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Online Quran Teaching Academy</title>
 
 <style>
@@ -15,24 +16,36 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f7f4eb;
-color:#222;
+background:#f8f4e8;
+overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
-background:#012b24;
-padding:15px 5%;
+background:#022b24;
+padding:18px 6%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
-border-bottom:3px solid #c89b3c;
+border-bottom:3px solid #d4a73f;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:12px;
 color:#f5d27a;
 font-size:28px;
 font-weight:bold;
+}
+
+.logo img{
+width:60px;
 }
 
 nav a{
@@ -40,235 +53,343 @@ color:white;
 text-decoration:none;
 margin:0 12px;
 font-size:15px;
+transition:0.3s;
 }
 
-.whatsapp-btn{
-background:#c89b3c;
-color:black;
-padding:10px 20px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+nav a:hover{
+color:#f5d27a;
 }
+
+.contact-btn{
+background:#d4a73f;
+padding:12px 22px;
+border-radius:8px;
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* HERO */
 
 .hero{
-background:#012b24;
-color:white;
-padding:70px 5%;
+background:#022b24;
+padding:80px 6%;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 flex-wrap:wrap;
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+bottom:-120px;
+left:0;
+width:100%;
+height:250px;
+background:#f8f4e8;
+border-radius:50% 50% 0 0;
 }
 
 .hero-text{
-max-width:550px;
+max-width:560px;
+z-index:2;
 }
 
-.hero-text h2{
-font-size:58px;
-line-height:1.2;
+.hero-text h4{
+color:#f5d27a;
+font-size:28px;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:72px;
+line-height:1.1;
+color:white;
 margin-bottom:20px;
+}
+
+.hero-text span{
 color:#f5d27a;
 }
 
 .hero-text p{
 font-size:20px;
-line-height:1.8;
-margin-bottom:25px;
+line-height:1.9;
+color:#ddd;
+margin-bottom:30px;
 }
 
 .hero-buttons a{
 display:inline-block;
-margin-right:15px;
-margin-top:10px;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
+margin-right:15px;
+margin-top:10px;
 }
 
-.enroll-btn{
-background:#c89b3c;
+.enroll{
+background:#d4a73f;
 color:black;
 }
 
-.contact-btn{
-border:2px solid #c89b3c;
+.whatsapp{
+border:2px solid #d4a73f;
 color:#f5d27a;
 }
 
-.hero img{
-width:450px;
-max-width:100%;
-border-radius:25px;
-border:5px solid #c89b3c;
+.hero-image{
+z-index:2;
+position:relative;
 }
 
+.hero-image img{
+width:480px;
+max-width:100%;
+border-radius:40px;
+border:6px solid #d4a73f;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FEATURES */
+
 .features{
-background:white;
-padding:50px 5%;
+padding:80px 6% 40px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+gap:25px;
 text-align:center;
+position:relative;
+z-index:5;
 }
 
 .feature-box{
-padding:20px;
-border-radius:15px;
-background:#fff8e8;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+background:white;
+padding:30px 20px;
+border-radius:20px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-8px);
+}
+
+.feature-icon{
+font-size:45px;
+margin-bottom:15px;
 }
 
 .feature-box h3{
-margin-top:10px;
-color:#012b24;
+color:#022b24;
+font-size:20px;
 }
+
+/* SECTION TITLE */
 
 .section-title{
 text-align:center;
-font-size:42px;
-color:#012b24;
-margin:60px 0 40px;
+font-size:48px;
+margin:70px 0 50px;
+color:#022b24;
 }
 
+/* COURSES */
+
 .courses{
-padding:0 5% 70px;
+padding:0 6% 70px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .course-card{
 background:white;
-border-radius:18px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:translateY(-10px);
 }
 
 .course-card img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
 }
 
-.course-card h3{
-padding:20px 10px 10px;
-color:#012b24;
+.course-content{
+padding:25px;
+text-align:center;
 }
 
-.course-card p{
-padding:0 15px 25px;
-line-height:1.7;
-color:#555;
+.course-content h3{
+color:#022b24;
+margin-bottom:15px;
+font-size:26px;
 }
+
+.course-content p{
+color:#555;
+line-height:1.8;
+}
+
+/* TEACHERS */
 
 .teachers{
-background:#012b24;
-padding:70px 5%;
+background:#022b24;
+padding:80px 6%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
+gap:40px;
+}
+
+.teacher-image img{
+width:500px;
+max-width:100%;
+border-radius:35px;
+border:6px solid #d4a73f;
+}
+
+.teacher-content{
+max-width:520px;
 color:white;
 }
 
-.teacher-text{
-max-width:500px;
-}
-
-.teacher-text h2{
-font-size:45px;
+.teacher-content h2{
+font-size:52px;
 color:#f5d27a;
 margin-bottom:20px;
 }
 
-.teacher-text p{
+.teacher-content p{
 line-height:1.9;
 margin-bottom:20px;
+color:#ddd;
 }
 
-.teacher-text ul{
+.teacher-content ul{
 margin-left:20px;
-line-height:2;
+line-height:2.2;
 }
 
-.teachers img{
-width:450px;
-max-width:100%;
-border-radius:25px;
-border:5px solid #c89b3c;
-margin-top:20px;
-}
+/* REGISTRATION */
 
 .registration{
 background:white;
 padding:50px;
-max-width:450px;
-border-radius:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:25px;
+max-width:500px;
+margin:70px auto;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .registration h2{
 text-align:center;
-margin-bottom:25px;
-color:#012b24;
+margin-bottom:30px;
+color:#022b24;
+font-size:38px;
 }
 
 .registration input,
 .registration select{
 width:100%;
-padding:14px;
-margin-bottom:15px;
+padding:15px;
+margin-bottom:18px;
 border:1px solid #ccc;
-border-radius:8px;
+border-radius:10px;
 font-size:16px;
 }
 
 .registration button{
 width:100%;
-padding:15px;
-background:#012b24;
-color:white;
+padding:16px;
 border:none;
-border-radius:8px;
+background:#022b24;
+color:white;
 font-size:18px;
+border-radius:10px;
 font-weight:bold;
 cursor:pointer;
 }
 
+/* STATS */
+
 .stats{
-background:#c89b3c;
-padding:30px 5%;
+background:#d4a73f;
+padding:40px 6%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 text-align:center;
-color:black;
 }
 
 .stat-box h2{
-font-size:40px;
+font-size:50px;
+margin-bottom:10px;
+color:#022b24;
 }
+
+.stat-box p{
+font-size:20px;
+font-weight:bold;
+}
+
+/* FOOTER */
 
 footer{
-background:#011c17;
+background:#011915;
 color:white;
+padding:30px;
 text-align:center;
-padding:25px;
+font-size:16px;
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
+
+header{
+justify-content:center;
+text-align:center;
+gap:20px;
+}
 
 .hero{
 text-align:center;
 justify-content:center;
 }
 
-.hero-text h2{
-font-size:42px;
+.hero-text h1{
+font-size:48px;
+}
+
+.hero-text h4{
+font-size:22px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.hero-buttons{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.hero-buttons a{
+margin-right:0;
+width:220px;
 }
 
 .teachers{
@@ -276,8 +397,8 @@ justify-content:center;
 text-align:center;
 }
 
-.registration{
-margin-top:30px;
+.teacher-content h2{
+font-size:40px;
 }
 
 }
@@ -290,19 +411,28 @@ margin-top:30px;
 <header>
 
 <div class="logo">
-Online Quran Teaching Academy
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<div>
+Online Quran<br>
+Teaching Academy
+</div>
+
 </div>
 
 <nav>
 <a href="#">Home</a>
 <a href="#">About Us</a>
 <a href="#">Courses</a>
-<a href="#">Teachers</a>
+<a href="#">Our Teachers</a>
 <a href="#">Fee Plans</a>
+<a href="#">Class Timing</a>
+<a href="#">Testimonials</a>
 <a href="#">Contact</a>
 </nav>
 
-<a href="https://wa.me/923437353621" class="whatsapp-btn">
+<a href="https://wa.me/923437353621" class="contact-btn">
 03437353621
 </a>
 
@@ -312,55 +442,69 @@ Online Quran Teaching Academy
 
 <div class="hero-text">
 
-<h2>
-Online Quran Teaching Academy
-</h2>
+<h4>WELCOME TO</h4>
+
+<h1>
+Online Quran <br>
+<span>Teaching Academy</span>
+</h1>
 
 <p>
-Learn Quran, Tajweed, Hifz and Islamic Studies online with professional male and female teachers.
+Learn Quran, Live Islam, Build a Better Tomorrow.  
+Professional online Quran and Islamic education for kids and adults.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="enroll-btn">
-Enroll Now
+<a href="#" class="enroll">
+ENROLL NOW
 </a>
 
-<a href="https://wa.me/923437353621" class="contact-btn">
-WhatsApp Now
+<a href="https://wa.me/923437353621" class="whatsapp">
+WHATSAPP NOW
 </a>
 
 </div>
 
 </div>
 
-<img src="https://images.unsplash.com/photo-1587614382346-ac5f4f2f84f1?q=80&w=1200&auto=format&fit=crop" alt="Quran Student">
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=1200&auto=format&fit=crop">
+
+</div>
 
 </section>
 
 <section class="features">
 
 <div class="feature-box">
+<div class="feature-icon">📖</div>
 <h3>One To One Classes</h3>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">👨‍🏫</div>
 <h3>Male & Female Teachers</h3>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">☪️</div>
 <h3>All Islamic Courses</h3>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">⏰</div>
 <h3>Flexible Timings</h3>
 </div>
 
 <div class="feature-box">
-<h3>Certificates</h3>
+<div class="feature-icon">🏆</div>
+<h3>Certificates Provided</h3>
 </div>
 
 <div class="feature-box">
+<div class="feature-icon">📈</div>
 <h3>Progress Reports</h3>
 </div>
 
@@ -376,23 +520,15 @@ Our Courses
 
 <img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop">
 
+<div class="course-content">
+
 <h3>Quran Reading</h3>
 
 <p>
-Learn Noorani Qaida and Quran Reading with proper Tajweed.
+Learn Noorani Qaida and Quran reading with proper Tajweed.
 </p>
 
 </div>
-
-<div class="course-card">
-
-<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1200&auto=format&fit=crop">
-
-<h3>Tajweed Course</h3>
-
-<p>
-Professional Quran pronunciation and Tajweed classes.
-</p>
 
 </div>
 
@@ -400,11 +536,15 @@ Professional Quran pronunciation and Tajweed classes.
 
 <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop">
 
-<h3>Hifz-ul-Quran</h3>
+<div class="course-content">
+
+<h3>Tajweed</h3>
 
 <p>
-Memorize Quran online with qualified teachers.
+Learn Quran with proper pronunciation and Tajweed rules.
 </p>
+
+</div>
 
 </div>
 
@@ -412,11 +552,31 @@ Memorize Quran online with qualified teachers.
 
 <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
 
+<div class="course-content">
+
+<h3>Hifz-ul-Quran</h3>
+
+<p>
+Memorize Quran online with easy and modern methods.
+</p>
+
+</div>
+
+</div>
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop">
+
+<div class="course-content">
+
 <h3>Islamic Studies</h3>
 
 <p>
-Learn Hadith, Seerah, Aqeedah and Islamic knowledge.
+Learn Hadith, Seerah, Aqeedah and Islamic teachings.
 </p>
+
+</div>
 
 </div>
 
@@ -424,28 +584,35 @@ Learn Hadith, Seerah, Aqeedah and Islamic knowledge.
 
 <section class="teachers">
 
-<div class="teacher-text">
+<div class="teacher-content">
 
 <h2>
 Qualified Male & Female Teachers
 </h2>
 
 <p>
-Highly experienced Quran teachers available for kids and adults worldwide.
+Highly qualified and experienced Quran teachers available for children and adults worldwide.
 </p>
 
 <ul>
-<li>Friendly Environment</li>
+<li>Expert Male & Female Teachers</li>
+<li>Friendly Islamic Environment</li>
 <li>Flexible Timings</li>
-<li>Professional Teaching</li>
-<li>One To One Classes</li>
+<li>One To One Online Classes</li>
+<li>Worldwide Students</li>
 </ul>
 
 </div>
 
+<div class="teacher-image">
+
 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
 
-<div class="registration">
+</div>
+
+</section>
+
+<section class="registration">
 
 <h2>
 Student Registration
@@ -459,10 +626,11 @@ Student Registration
 
 <select>
 <option>Select Course</option>
-<option>Qaida</option>
+<option>Qaida Course</option>
 <option>Quran Reading</option>
-<option>Hifz</option>
 <option>Tajweed</option>
+<option>Hifz-ul-Quran</option>
+<option>Islamic Studies</option>
 </select>
 
 <select>
@@ -473,10 +641,8 @@ Student Registration
 </select>
 
 <button>
-Register Now
+REGISTER NOW
 </button>
-
-</div>
 
 </section>
 
