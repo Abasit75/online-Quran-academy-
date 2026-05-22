@@ -1,454 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Quran Teaching Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Quran Teaching Academy</title>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,sans-serif;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    body{
-      background:#f5f5f5;
-      color:#222;
-    }
+body{
+background:#f7f4eb;
+color:#222;
+}
 
-    header{
-      background:#0b5d3b;
-      color:white;
-      padding:20px;
-      text-align:center;
-    }
+header{
+background:#012b24;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+border-bottom:3px solid #c89b3c;
+}
 
-    header h1{
-      font-size:42px;
-    }
+.logo{
+color:#f5d27a;
+font-size:28px;
+font-weight:bold;
+}
 
-    header p{
-      margin-top:10px;
-      font-size:18px;
-    }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+font-size:15px;
+}
 
-    nav{
-      margin-top:15px;
-    }
+.whatsapp-btn{
+background:#c89b3c;
+color:black;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:bold;
-    }
+.hero{
+background:#012b24;
+color:white;
+padding:70px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
 
-    .hero{
-      position:relative;
-    }
+.hero-text{
+max-width:550px;
+}
 
-    .hero img{
-      width:100%;
-      height:500px;
-      object-fit:cover;
-    }
+.hero-text h2{
+font-size:58px;
+line-height:1.2;
+margin-bottom:20px;
+color:#f5d27a;
+}
 
-    .hero-text{
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      background:rgba(0,0,0,0.6);
-      padding:35px;
-      border-radius:15px;
-      color:white;
-      text-align:center;
-      width:90%;
-      max-width:700px;
-    }
+.hero-text p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:25px;
+}
 
-    .hero-text h2{
-      font-size:50px;
-      margin-bottom:15px;
-    }
+.hero-buttons a{
+display:inline-block;
+margin-right:15px;
+margin-top:10px;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .hero-text p{
-      font-size:20px;
-      line-height:1.7;
-    }
+.enroll-btn{
+background:#c89b3c;
+color:black;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:20px;
-      background:#ffd700;
-      color:black;
-      padding:12px 25px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+.contact-btn{
+border:2px solid #c89b3c;
+color:#f5d27a;
+}
 
-    .section{
-      max-width:1200px;
-      margin:auto;
-      padding:60px 20px;
-    }
+.hero img{
+width:450px;
+max-width:100%;
+border-radius:25px;
+border:5px solid #c89b3c;
+}
 
-    .section-title{
-      text-align:center;
-      font-size:40px;
-      color:#0b5d3b;
-      margin-bottom:40px;
-    }
+.features{
+background:white;
+padding:50px 5%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
 
-    .courses{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
+.feature-box{
+padding:20px;
+border-radius:15px;
+background:#fff8e8;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .card{
-      background:white;
-      border-radius:15px;
-      overflow:hidden;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+.feature-box h3{
+margin-top:10px;
+color:#012b24;
+}
 
-    .card img{
-      width:100%;
-      height:230px;
-      object-fit:cover;
-    }
+.section-title{
+text-align:center;
+font-size:42px;
+color:#012b24;
+margin:60px 0 40px;
+}
 
-    .card-content{
-      padding:20px;
-    }
+.courses{
+padding:0 5% 70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-    .card-content h3{
-      margin-bottom:10px;
-      color:#0b5d3b;
-    }
+.course-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
 
-    .card-content p{
-      line-height:1.7;
-      color:#555;
-    }
+.course-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
 
-    .teachers{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
+.course-card h3{
+padding:20px 10px 10px;
+color:#012b24;
+}
 
-    .teacher-card{
-      background:white;
-      border-radius:15px;
-      overflow:hidden;
-      text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+.course-card p{
+padding:0 15px 25px;
+line-height:1.7;
+color:#555;
+}
 
-    .teacher-card img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-    }
+.teachers{
+background:#012b24;
+padding:70px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+color:white;
+}
 
-    .teacher-card h3{
-      margin-top:15px;
-      color:#0b5d3b;
-    }
+.teacher-text{
+max-width:500px;
+}
 
-    .teacher-card p{
-      padding:10px 20px 20px;
-      color:#555;
-    }
+.teacher-text h2{
+font-size:45px;
+color:#f5d27a;
+margin-bottom:20px;
+}
 
-    .about{
-      background:white;
-      border-radius:15px;
-      padding:40px;
-      text-align:center;
-      line-height:1.8;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+.teacher-text p{
+line-height:1.9;
+margin-bottom:20px;
+}
 
-    .reviews{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:25px;
-    }
+.teacher-text ul{
+margin-left:20px;
+line-height:2;
+}
 
-    .review-card{
-      background:white;
-      padding:25px;
-      border-radius:15px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+.teachers img{
+width:450px;
+max-width:100%;
+border-radius:25px;
+border:5px solid #c89b3c;
+margin-top:20px;
+}
 
-    .review-card h4{
-      color:#0b5d3b;
-      margin-bottom:10px;
-    }
+.registration{
+background:white;
+padding:50px;
+max-width:450px;
+border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .contact{
-      background:#0b5d3b;
-      color:white;
-      text-align:center;
-      padding:60px 20px;
-    }
+.registration h2{
+text-align:center;
+margin-bottom:25px;
+color:#012b24;
+}
 
-    .contact h2{
-      margin-bottom:20px;
-      font-size:38px;
-    }
+.registration input,
+.registration select{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
 
-    .contact p{
-      margin:10px 0;
-      font-size:18px;
-    }
+.registration button{
+width:100%;
+padding:15px;
+background:#012b24;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
 
-    .whatsapp-btn{
-      display:inline-block;
-      margin-top:25px;
-      background:#25D366;
-      color:white;
-      padding:14px 30px;
-      border-radius:10px;
-      text-decoration:none;
-      font-size:18px;
-      font-weight:bold;
-    }
+.stats{
+background:#c89b3c;
+padding:30px 5%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+color:black;
+}
 
-    footer{
-      background:#083f29;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
+.stat-box h2{
+font-size:40px;
+}
 
-  </style>
+footer{
+background:#011c17;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+justify-content:center;
+}
+
+.hero-text h2{
+font-size:42px;
+}
+
+.teachers{
+justify-content:center;
+text-align:center;
+}
+
+.registration{
+margin-top:30px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <h1>Online Quran Teaching Academy</h1>
+<div class="logo">
+Online Quran Teaching Academy
+</div>
 
-  <p>Learn Quran Online With Professional Teachers</p>
+<nav>
+<a href="#">Home</a>
+<a href="#">About Us</a>
+<a href="#">Courses</a>
+<a href="#">Teachers</a>
+<a href="#">Fee Plans</a>
+<a href="#">Contact</a>
+</nav>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Teachers</a>
-    <a href="#">Reviews</a>
-    <a href="#">Contact</a>
-  </nav>
+<a href="https://wa.me/923437353621" class="whatsapp-btn">
+03437353621
+</a>
 
 </header>
 
 <section class="hero">
 
-  <img src="https://picsum.photos/1400/500" alt="Quran Academy">
+<div class="hero-text">
 
-  <div class="hero-text">
+<h2>
+Online Quran Teaching Academy
+</h2>
 
-    <h2>Learn Quran Online</h2>
+<p>
+Learn Quran, Tajweed, Hifz and Islamic Studies online with professional male and female teachers.
+</p>
 
-    <p>
-      Join professional online Quran classes with experienced male and female teachers.
-    </p>
+<div class="hero-buttons">
 
-    <a href="#" class="btn">Enroll Now</a>
+<a href="#" class="enroll-btn">
+Enroll Now
+</a>
 
-  </div>
+<a href="https://wa.me/923437353621" class="contact-btn">
+WhatsApp Now
+</a>
 
-</section>
+</div>
 
-<section class="section">
+</div>
 
-  <h2 class="section-title">Our Courses</h2>
-
-  <div class="courses">
-
-    <div class="card">
-
-      <img src="https://picsum.photos/400/300?1">
-
-      <div class="card-content">
-
-        <h3>Qaida Course</h3>
-
-        <p>
-          Learn Noorani Qaida with tajweed and proper pronunciation.
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://picsum.photos/400/300?2">
-
-      <div class="card-content">
-
-        <h3>Quran Reading</h3>
-
-        <p>
-          Professional Quran reading classes for kids and adults.
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://picsum.photos/400/300?3">
-
-      <div class="card-content">
-
-        <h3>Hifz Course</h3>
-
-        <p>
-          Online Hifz-ul-Quran classes with expert teachers.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
+<img src="https://images.unsplash.com/photo-1587614382346-ac5f4f2f84f1?q=80&w=1200&auto=format&fit=crop" alt="Quran Student">
 
 </section>
 
-<section class="section">
+<section class="features">
 
-  <h2 class="section-title">Our Teachers</h2>
+<div class="feature-box">
+<h3>One To One Classes</h3>
+</div>
 
-  <div class="teachers">
+<div class="feature-box">
+<h3>Male & Female Teachers</h3>
+</div>
 
-    <div class="teacher-card">
+<div class="feature-box">
+<h3>All Islamic Courses</h3>
+</div>
 
-      <img src="https://picsum.photos/400/400?4">
+<div class="feature-box">
+<h3>Flexible Timings</h3>
+</div>
 
-      <h3>Qari Abdul Rehman</h3>
+<div class="feature-box">
+<h3>Certificates</h3>
+</div>
 
-      <p>
-        Expert Quran Teacher With 10 Years Experience
-      </p>
-
-    </div>
-
-    <div class="teacher-card">
-
-      <img src="https://picsum.photos/400/400?5">
-
-      <h3>Qaria Ayesha</h3>
-
-      <p>
-        Professional Female Quran Teacher
-      </p>
-
-    </div>
-
-    <div class="teacher-card">
-
-      <img src="https://picsum.photos/400/400?6">
-
-      <h3>Mufti Salman</h3>
-
-      <p>
-        Islamic Scholar & Tajweed Specialist
-      </p>
-
-    </div>
-
-  </div>
+<div class="feature-box">
+<h3>Progress Reports</h3>
+</div>
 
 </section>
 
-<section class="section">
+<h2 class="section-title">
+Our Courses
+</h2>
 
-  <div class="about">
+<section class="courses">
 
-    <h2 class="section-title">About Our Academy</h2>
+<div class="course-card">
 
-    <p>
-      Our Online Quran Teaching Academy provides high quality Quran education for students all around the world.
-      We offer Quran reading, tajweed, hifz and Islamic studies classes with experienced teachers.
-    </p>
+<img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop">
 
-  </div>
+<h3>Quran Reading</h3>
+
+<p>
+Learn Noorani Qaida and Quran Reading with proper Tajweed.
+</p>
+
+</div>
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Tajweed Course</h3>
+
+<p>
+Professional Quran pronunciation and Tajweed classes.
+</p>
+
+</div>
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Hifz-ul-Quran</h3>
+
+<p>
+Memorize Quran online with qualified teachers.
+</p>
+
+</div>
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
+
+<h3>Islamic Studies</h3>
+
+<p>
+Learn Hadith, Seerah, Aqeedah and Islamic knowledge.
+</p>
+
+</div>
 
 </section>
 
-<section class="section">
+<section class="teachers">
 
-  <h2 class="section-title">Student Reviews</h2>
+<div class="teacher-text">
 
-  <div class="reviews">
+<h2>
+Qualified Male & Female Teachers
+</h2>
 
-    <div class="review-card">
+<p>
+Highly experienced Quran teachers available for kids and adults worldwide.
+</p>
 
-      <h4>Ahmed Khan</h4>
+<ul>
+<li>Friendly Environment</li>
+<li>Flexible Timings</li>
+<li>Professional Teaching</li>
+<li>One To One Classes</li>
+</ul>
 
-      <p>
-        Excellent teachers and very friendly environment for kids.
-      </p>
+</div>
 
-    </div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
 
-    <div class="review-card">
+<div class="registration">
 
-      <h4>Fatima Ali</h4>
+<h2>
+Student Registration
+</h2>
 
-      <p>
-        My children improved Quran reading in just a few months.
-      </p>
+<input type="text" placeholder="Student Name">
 
-    </div>
+<input type="text" placeholder="Parent Name">
 
-    <div class="review-card">
+<input type="text" placeholder="WhatsApp Number">
 
-      <h4>Usman Tariq</h4>
+<select>
+<option>Select Course</option>
+<option>Qaida</option>
+<option>Quran Reading</option>
+<option>Hifz</option>
+<option>Tajweed</option>
+</select>
 
-      <p>
-        Highly recommended online Quran academy.
-      </p>
+<select>
+<option>Select Age</option>
+<option>5-10 Years</option>
+<option>11-18 Years</option>
+<option>Adults</option>
+</select>
 
-    </div>
+<button>
+Register Now
+</button>
 
-  </div>
+</div>
 
 </section>
 
-<section class="contact">
+<section class="stats">
 
-  <h2>Contact Us</h2>
+<div class="stat-box">
+<h2>5000+</h2>
+<p>Happy Students</p>
+</div>
 
-  <p>Phone: 03437353621</p>
+<div class="stat-box">
+<h2>50+</h2>
+<p>Qualified Teachers</p>
+</div>
 
-  <p>Email: info@onlinequranacademy.com</p>
+<div class="stat-box">
+<h2>Worldwide</h2>
+<p>Students Around The World</p>
+</div>
 
-  <p>Pakistan</p>
-
-  <a href="https://wa.me/923437353621" class="whatsapp-btn">
-    Contact On WhatsApp
-  </a>
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Flexible Timings</p>
+</div>
 
 </section>
 
 <footer>
 
-  <p>
-    © 2026 Online Quran Teaching Academy — All Rights Reserved
-  </p>
+<p>
+© 2026 Online Quran Teaching Academy — All Rights Reserved
+</p>
 
 </footer>
 
