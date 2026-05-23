@@ -514,6 +514,7 @@ flex-wrap:wrap;
 }
 
 .hero-title img{
-width:20px;
-height:auto;
+width:50px !important;
+height:50px !important;
+object-fit:contain;
 }
