@@ -32,7 +32,8 @@ z-index:1000;
 }
 
 .logo img{
-width:75px;
+    width: 180px;
+    height: auto;
 }
 
 nav a{
