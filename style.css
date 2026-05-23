@@ -513,8 +513,10 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-.hero-title img{
-width:50px !important;
-height:50px !important;
+.hero-logo{
+width:45px !important;
+height:45px !important;
+max-width:45px !important;
 object-fit:contain;
+display:block;
 }
