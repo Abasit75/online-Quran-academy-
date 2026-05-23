@@ -341,6 +341,36 @@ Chat On WhatsApp
 </p>
 
 </footer>
+<script>
 
+function sendToWhatsApp() {
+
+var student =
+document.getElementById("studentName").value;
+
+var parent =
+document.getElementById("parentName").value;
+
+var number =
+document.getElementById("whatsappNumber").value;
+
+var course =
+document.getElementById("course").value;
+
+var message =
+"New Student Registration%0A%0A" +
+"Student Name: " + student + "%0A" +
+"Parent Name: " + parent + "%0A" +
+"WhatsApp Number: " + number + "%0A" +
+"Course: " + course;
+
+var url =
+"https://wa.me/923437353621?text=" + message;
+
+window.open(url, "_blank");
+
+}
+
+</script>
 </body>
 </html>
