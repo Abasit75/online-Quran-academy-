@@ -240,25 +240,41 @@ Start your Quran learning journey today with professional online Quran teachers 
 
 <div class="form-box">
 
-<h3>Student Registration</h3>
+<script>
 
-<input type="text" placeholder="Student Name">
+function sendToWhatsApp() {
 
-<input type="text" placeholder="Parent Name">
+let student =
+document.getElementById("studentName").value;
 
-<input type="text" placeholder="WhatsApp Number">
+let parent =
+document.getElementById("parentName").value;
 
-<select>
-<option>Select Course</option>
-<option>Qaida Course</option>
-<option>Quran Reading</option>
-<option>Tajweed</option>
-<option>Hifz-ul-Quran</option>
-</select>
+let number =
+document.getElementById("whatsappNumber").value;
 
-<button>
-REGISTER NOW
-</button>
+let course =
+document.getElementById("course").value;
+
+let message =
+`New Student Registration
+
+Student Name: ${student}
+
+Parent Name: ${parent}
+
+WhatsApp Number: ${number}
+
+Course: ${course}`;
+
+let whatsappURL =
+`https://wa.me/923437353621?text=${encodeURIComponent(message)}`;
+
+window.open(whatsappURL, "_blank");
+
+}
+
+</script>
 
 </div>
 
