@@ -3,33 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Online Quran Teaching Academy</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#012d2d;
+color:white;
+}
+
+header{
+background:#001f1f;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d4a64a;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+.whatsapp-btn{
+background:#d4a64a;
+padding:10px 18px;
+border-radius:8px;
+color:black;
+font-weight:600;
+text-decoration:none;
+}
+
+.hero{
+padding:80px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:1.2;
+}
+
+.hero span{
+color:#d4a64a;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+}
+
+.btns{
+margin-top:30px;
+}
+
+.btn{
+padding:14px 30px;
+background:#d4a64a;
+color:black;
+text-decoration:none;
+border-radius:8px;
+margin-right:10px;
+font-weight:600;
+}
+
+.hero img{
+width:450px;
+max-width:100%;
+border-radius:20px;
+border:4px solid #d4a64a;
+}
+
+.features{
+background:white;
+color:black;
+padding:50px 5%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.feature{
+padding:20px;
+}
+
+.courses{
+padding:80px 5%;
+text-align:center;
+}
+
+.courses h2{
+color:#d4a64a;
+margin-bottom:40px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.course{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+}
+
+.teachers{
+padding:80px 5%;
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+align-items:center;
+}
+
+.teacher-img{
+flex:1;
+}
+
+.teacher-img img{
+width:100%;
+border-radius:20px;
+}
+
+.teacher-content{
+flex:1;
+}
+
+.teacher-content h2{
+color:#d4a64a;
+margin-bottom:20px;
+}
+
+.form-box{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+}
+
+.form-box button{
+width:100%;
+padding:15px;
+background:#d4a64a;
+border:none;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+}
+
+footer{
+background:#001818;
+padding:40px 5%;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
 </head>
-
-
 <body>
 
 <header>
 
 <div class="logo">
-
-<img src="file_000000004ac4720b95e42f73c556517a.png" alt="Logo">
-
+Online Quran Academy
 </div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Courses</a>
-<a href="#">Teachers</a>
-<a href="#">Reviews</a>
-<a href="#">Contact</a>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Courses</a></li>
+<li><a href="#">Teachers</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 </nav>
 
-<a href="https://wa.me/923437353621" class="contact-btn">
+<a href="https://wa.me/923437353621" class="whatsapp-btn">
 03437353621
 </a>
 
@@ -39,331 +244,97 @@
 
 <div class="hero-text">
 
-<h4>WELCOME TO</h4>
-
-
-
-<p>
-Professional online Quran classes with expert male and female teachers for kids and adults worldwide.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="enroll">
-ENROLL NOW
-</a>
-
-<a href="https://wa.me/923437353621" class="whatsapp"<div class="hero-title">
-
-
-
 <h1>
-<img class="hero-logo" src="logo.png">
-Online Quran <br>
+Online Quran
 <span>Teaching Academy</span>
 </h1>
-</div>>
-WHATSAPP NOW
-</a>
 
+<p>
+Learn Quran Online with Qualified Male & Female Teachers.
+One-to-One Live Classes for Kids & Adults.
+</p>
+
+<div class="btns">
+<a href="#" class="btn">Enroll Now</a>
+<a href="https://wa.me/923437353621" class="btn">WhatsApp</a>
 </div>
 
 </div>
 
-<div class="hero-image">
-
-<img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa?q=80&w=1200&auto=format&fit=crop">
-
-</div>
+<img src="student.jpg" alt="Student">
 
 </section>
 
 <section class="features">
 
-<div class="feature-box">
-<div class="feature-icon">📖</div>
-<h3>One To One Classes</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">👨‍🏫</div>
-<h3>Expert Teachers</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">☪️</div>
-<h3>Islamic Courses</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">⏰</div>
-<h3>Flexible Timings</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">🌍</div>
-<h3>Worldwide Students</h3>
-</div>
-
-<div class="feature-box">
-<div class="feature-icon">🏆</div>
-<h3>Certificates</h3>
-</div>
+<div class="feature">One To One Classes</div>
+<div class="feature">Male & Female Teachers</div>
+<div class="feature">All Islamic Courses</div>
+<div class="feature">Flexible Timing</div>
+<div class="feature">Certificates</div>
+<div class="feature">Progress Reports</div>
 
 </section>
-
-<h2 class="section-title">
-Our Courses
-</h2>
 
 <section class="courses">
 
-<div class="course-card">
+<h2>Our Courses</h2>
 
-<img src="file_00000000ba9071faa50b15dbb1df902f.png">
+<div class="course-grid">
 
-<div class="course-content">
-
-<h3>Qaida Course</h3>
-
-<p>
-Learn Noorani Qaida with proper pronunciation and Tajweed.
-</p>
-
-</div>
-
-</div>
-
-<div class="course-card">
-
-<img src="file_00000000ac847207b9648c0b6eb959f5.png">
-
-<div class="course-content">
-
-<h3>Quran Reading</h3>
-
-<p>
-Professional Quran reading classes for children and adults.
-</p>
-
-</div>
-
-</div>
-
-<div class="course-card">
-
-<img src="file_00000000ffd471fabfe517ae39cc482b.png">
-
-<div class="course-content">
-
-<h3>Hifz-ul-Quran</h3>
-
-<p>
-Memorize Quran online with highly experienced Quran teachers.
-</p>
-
-</div>
+<div class="course">Quran Reading</div>
+<div class="course">Tajweed</div>
+<div class="course">Hifz-ul-Quran</div>
+<div class="course">Islamic Studies</div>
+<div class="course">Dua & Masnoon</div>
+<div class="course">Arabic Language</div>
 
 </div>
 
 </section>
-
-<h2 class="section-title">
-Our Teachers
-</h2>
 
 <section class="teachers">
 
-<div class="teacher-card">
+<div class="teacher-content">
 
-<img src="teacher1.jpg">
-
-<h3>Molana Mumtaz Ahmed</h3>
+<h2>Qualified Teachers</h2>
 
 <p>
-Senior Quran Teacher with excellent experience in Tajweed and Hifz education.
-</p>
-
-</div>
-
-<div class="teacher-card">
-
-<img src="teacher2.jpg">
-
-<h3>Molana Abdul Basit</h3>
-
-<p>
-Professional Quran and Islamic Studies teacher for kids and adults.
-</p>
-
-</div>
-
-<div class="teacher-card">
-
-<img src="teacher3.jpg">
-
-<h3>Molana Muhammad Naeem</h3>
-
-<p>
-Experienced online Quran teacher with worldwide teaching experience.
-</p>
-
-</div>
-
-</section>
-
-<section class="about">
-
-<div class="about-box">
-
-<h2 class="section-title">
-About Our Academy
-</h2>
-
-<p>
-Our Online Quran Teaching Academy provides high quality Quran education for students all around the world.
-
-We offer Quran Reading, Tajweed, Hifz-ul-Quran and Islamic Studies with highly qualified male teachers in a professional Islamic environment.
-</p>
-
-</div>
-
-</section>
-
-<section class="registration">
-
-<div class="registration-text">
-
-<h2>
-Register For Free Trial Class
-</h2>
-
-<p>
-Start your Quran learning journey today with professional online Quran teachers and flexible class timings.
+Highly Qualified Male & Female Quran Tutors Available 24/7.
 </p>
 
 </div>
 
 <div class="form-box">
 
-<form onsubmit="sendToWhatsApp(); return false;">
+<h3>Student Registration</h3>
 
-<input type="text" id="studentName" placeholder="Student Name" required>
+<input type="text" placeholder="Student Name">
 
-<input type="text" id="parentName" placeholder="Parent Name" required>
+<input type="text" placeholder="Parent Name">
 
-<input type="text" id="whatsappNumber" placeholder="WhatsApp Number" required>
+<input type="text" placeholder="WhatsApp Number">
 
-<select id="course">
-<option>Qaida Course</option>
+<select>
+<option>Select Course</option>
 <option>Quran Reading</option>
 <option>Tajweed</option>
-<option>Hifz-ul-Quran</option>
+<option>Hifz</option>
 </select>
 
-<button type="submit">
-REGISTER NOW
-</button>
-
-</form>
-
-</script>
+<button>Register Now</button>
 
 </div>
-
-</section>
-
-<h2 class="section-title">
-Student Reviews
-</h2>
-
-<section class="testimonials">
-
-<div class="testimonial">
-
-<h3>Ahmed Khan</h3>
-
-<p>
-Excellent Quran academy with professional teachers and friendly environment.
-</p>
-
-</div>
-
-<div class="testimonial">
-
-<h3>Fatima Ali</h3>
-
-<p>
-My children improved Quran reading within a few months. Highly recommended.
-</p>
-
-</div>
-
-<div class="testimonial">
-
-<h3>Usman Tariq</h3>
-
-<p>
-Very professional online Quran classes with flexible timings and great support.
-</p>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>📞 03437353621</p>
-
-<p>📧 info@onlinequranacademy.com</p>
-
-<p>📍 Pakistan</p>
-
-<a href="https://wa.me/923437353621">
-Chat On WhatsApp
-</a>
 
 </section>
 
 <footer>
 
 <p>
-© 2026 Online Quran Teaching Academy — All Rights Reserved
+© 2026 Online Quran Teaching Academy. All Rights Reserved.
 </p>
 
 </footer>
-<script>
 
-function sendToWhatsApp() {
-
-var student =
-document.getElementById("studentName").value;
-
-var parent =
-document.getElementById("parentName").value;
-
-var number =
-document.getElementById("whatsappNumber").value;
-
-var course =
-document.getElementById("course").value;
-
-var message =
-"New Student Registration%0A%0A" +
-"Student Name: " + student + "%0A" +
-"Parent Name: " + parent + "%0A" +
-"WhatsApp Number: " + number + "%0A" +
-"Course: " + course;
-
-var url =
-"https://wa.me/923437353621?text=" + message;
-
-window.open(url, "_blank");
-
-}
-
-</script>
 </body>
 </html>
