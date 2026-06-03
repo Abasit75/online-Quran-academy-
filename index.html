@@ -3,243 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Online Quran Teaching Academy</title>
-<meta name="description" content="Learn Quran online with expert male and female teachers. Flexible timing, affordable courses, and professional Islamic education.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Hamster Clicker Game</title>
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth;}
-
-body{background:#032b2b;color:white;}
-
-/* HEADER */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 5%;
-background:#011818;
-position:sticky;
-top:0;
-z-index:999;
-border-bottom:1px solid #d4a64a33;
-}
-
-.logo{color:#d4a64a;font-weight:700;font-size:18px;}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:18px;
-}
-
-nav a{
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0b2b2b,#021515);
 color:white;
-text-decoration:none;
-font-size:14px;
+text-align:center;
 }
 
-nav a:hover{color:#d4a64a;}
-
-.whatsapp-btn{
-background:#d4a64a;
-padding:10px 15px;
-border-radius:8px;
-color:black;
-font-weight:700;
-text-decoration:none;
+h1{
+margin-top:30px;
+color:#ffd36a;
 }
 
-/* HAMBURGER */
-.menu-toggle{
-display:none;
-font-size:26px;
+.game{
+margin-top:50px;
+}
+
+.hamster{
+font-size:120px;
 cursor:pointer;
-color:white;
+transition:0.1s;
+user-select:none;
+display:inline-block;
 }
 
-/* HERO */
-.hero{
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items:center;
-padding:60px 5%;
-gap:20px;
+.hamster:active{
+transform:scale(0.9);
 }
 
-.hero-text{flex:1;min-width:280px;}
-
-.hero-text h1{font-size:50px;line-height:1.1;}
-
-.hero-text span{color:#d4a64a;}
-
-.hero-text p{margin:20px 0;line-height:1.6;}
-
-.hero img{
-width:420px;
-max-width:100%;
-border-radius:20px;
-border:4px solid #d4a64a;
+.score{
+font-size:30px;
+margin-top:20px;
+color:#00ffb3;
 }
 
 .btn{
-display:inline-block;
-padding:12px 18px;
+margin-top:20px;
+padding:10px 20px;
+background:#ffd36a;
+border:none;
 border-radius:8px;
-text-decoration:none;
-margin-right:10px;
-font-weight:600;
+font-weight:bold;
+cursor:pointer;
 }
 
-.btn1{background:#d4a64a;color:black;}
-.btn2{border:2px solid #d4a64a;color:#d4a64a;}
-
-/* FEATURES */
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-background:white;
-color:black;
-padding:40px 5%;
-text-align:center;
-gap:15px;
-}
-
-/* SECTIONS */
-.section-title{
-text-align:center;
-margin:60px 0 30px;
-color:#d4a64a;
-font-size:36px;
-}
-
-/* ABOUT */
-.about{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-padding:60px 5%;
-align-items:center;
-}
-
-.about img{
-width:400px;
-max-width:100%;
-border-radius:15px;
-}
-
-.about div{flex:1;min-width:280px;}
-
-/* COURSES */
-.courses,.teachers,.testimonials,.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:0 5%;
-}
-
-.card,.teacher,.testimonial,.price-card{
-background:white;
-color:black;
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
-.card img,.teacher img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.price{
-font-size:30px;
-color:#d4a64a;
-margin:10px 0;
-}
-
-/* FORM */
-.form{
-background:white;
-color:black;
-max-width:600px;
-margin:60px auto;
-padding:30px;
-border-radius:15px;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-/* FOOTER */
-footer{
-background:#011818;
-text-align:center;
-padding:30px;
+.shop{
 margin-top:40px;
-}
-
-/* FLOAT */
-.whats-float{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-text-decoration:none;
-color:white;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:all 0.8s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-nav ul{
-display:none;
-flex-direction:column;
-background:#011818;
-position:absolute;
-top:60px;
-right:5%;
-padding:10px;
-border-radius:10px;
-}
-
-.menu-toggle{display:block;}
-
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-text h1{font-size:36px;}
+background:white;
+color:black;
+display:inline-block;
+padding:20px;
+border-radius:12px;
 }
 
 </style>
@@ -247,131 +65,52 @@ text-align:center;
 
 <body>
 
-<header>
-<div class="logo">☪ Quran Academy</div>
+<h1>🐹 Hamster Clicker Game</h1>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="game">
 
-<nav id="menu">
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#courses">Courses</a></li>
-<li><a href="#teachers">Teachers</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+<div class="score">Coins: <span id="score">0</span></div>
 
-<a class="whatsapp-btn" href="https://wa.me/923437353621">WhatsApp</a>
-</header>
+<div class="hamster" onclick="clickHamster()">🐹</div>
 
-<section class="hero fade" id="home">
-<div class="hero-text">
-<h1>Learn Quran <span>Online Easily</span></h1>
-<p>Professional male & female teachers available for kids and adults worldwide.</p>
-<a class="btn btn1" href="#contact">Enroll Now</a>
-<a class="btn btn2" href="https://wa.me/923437353621">WhatsApp</a>
+<br>
+
+<button class="btn" onclick="buyUpgrade()">Upgrade (+1 per click) - Cost: <span id="cost">10</span></button>
+
 </div>
 
-<img src="teacher1.jpg" alt="Teacher">
-</section>
-
-<div class="features fade">
-<div>📖 <h4>Quran Reading</h4></div>
-<div>👨‍🏫 <h4>Expert Teachers</h4></div>
-<div>🕌 <h4>Islamic Courses</h4></div>
-<div>⏰ <h4>Flexible Time</h4></div>
+<div class="shop">
+<h3>Upgrade System</h3>
+<p>Every upgrade increases coins per click</p>
 </div>
-
-<h2 class="section-title fade">About Us</h2>
-<section class="about fade">
-<img src="teacher2.jpg">
-<div>
-<p>We provide professional Quran teaching with Tajweed, Qaida and full guidance for kids and adults online.</p>
-</div>
-</section>
-
-<h2 class="section-title fade" id="courses">Courses</h2>
-<div class="courses fade">
-<div class="card">
-<img src="qaida.jpg">
-<h3>Noorani Qaida</h3>
-</div>
-<div class="card">
-<img src="reading.jpg">
-<h3>Quran Reading</h3>
-</div>
-</div>
-
-<h2 class="section-title fade" id="teachers">Teachers</h2>
-<div class="teachers fade">
-<div class="teacher"><img src="teacher1.jpg"><h3>Male Teacher</h3></div>
-<div class="teacher"><img src="teacher2.jpg"><h3>Scholar</h3></div>
-<div class="teacher"><img src="teacher3.jpg"><h3>Female Teacher</h3></div>
-</div>
-
-<h2 class="section-title fade">Pricing</h2>
-<div class="pricing fade">
-<div class="price-card"><h3>Basic</h3><div class="price">$20</div></div>
-<div class="price-card"><h3>Standard</h3><div class="price">$35</div></div>
-<div class="price-card"><h3>Premium</h3><div class="price">$50</div></div>
-</div>
-
-<h2 class="section-title fade" id="contact">Contact</h2>
-<div class="form fade">
-<form onsubmit="sendWhatsApp(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="text" id="number" placeholder="WhatsApp Number" required>
-<select id="course">
-<option>Qaida</option>
-<option>Quran</option>
-</select>
-<textarea id="msg" placeholder="Message"></textarea>
-<input type="submit" value="Send">
-</form>
-</div>
-
-<footer>
-© 2026 Quran Academy | All Rights Reserved
-</footer>
-
-<a class="whats-float" href="https://wa.me/923437353621">💬</a>
 
 <script>
 
-// menu toggle
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("showMenu");
+let score = 0;
+let perClick = 1;
+let cost = 10;
+
+function clickHamster(){
+score += perClick;
+document.getElementById("score").innerText = score;
 }
 
-// whatsapp form
-function sendWhatsApp(e){
-e.preventDefault();
+function buyUpgrade(){
 
-let name=document.getElementById("name").value;
-let number=document.getElementById("number").value;
-let course=document.getElementById("course").value;
-let msg=document.getElementById("msg").value;
+if(score >= cost){
+score -= cost;
+perClick += 1;
+cost += 10;
 
-let url="https://wa.me/923437353621?text="
-+"Name: "+name+"%0a"
-+"Number: "+number+"%0a"
-+"Course: "+course+"%0a"
-+"Message: "+msg;
+document.getElementById("score").innerText = score;
+document.getElementById("cost").innerText = cost;
 
-window.open(url,"_blank");
+alert("Upgrade Purchased!");
+}else{
+alert("Not enough coins!");
 }
 
-// animation
-let elements=document.querySelectorAll(".fade");
-
-window.addEventListener("scroll",()=>{
-elements.forEach(el=>{
-let top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add("show");
 }
-});
-});
 
 </script>
 
