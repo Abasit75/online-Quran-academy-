@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Online Quran Teaching Academy</title>
+<meta name="description" content="Learn Quran online with expert male and female teachers. Flexible timing, affordable courses, and professional Islamic education.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -24,13 +25,10 @@ background:#011818;
 position:sticky;
 top:0;
 z-index:999;
+border-bottom:1px solid #d4a64a33;
 }
 
-.logo{
-color:#d4a64a;
-font-weight:700;
-font-size:18px;
-}
+.logo{color:#d4a64a;font-weight:700;font-size:18px;}
 
 nav ul{
 display:flex;
@@ -55,31 +53,31 @@ font-weight:700;
 text-decoration:none;
 }
 
-/* MENU BUTTON */
+/* HAMBURGER */
 .menu-toggle{
 display:none;
 font-size:26px;
 cursor:pointer;
+color:white;
 }
 
 /* HERO */
 .hero{
 display:flex;
 flex-wrap:wrap;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 padding:60px 5%;
 gap:20px;
 }
 
 .hero-text{flex:1;min-width:280px;}
 
-.hero-text h1{
-font-size:48px;
-line-height:1.1;
-}
+.hero-text h1{font-size:50px;line-height:1.1;}
 
 .hero-text span{color:#d4a64a;}
+
+.hero-text p{margin:20px 0;line-height:1.6;}
 
 .hero img{
 width:420px;
@@ -91,9 +89,9 @@ border:4px solid #d4a64a;
 .btn{
 display:inline-block;
 padding:12px 18px;
-margin-right:10px;
 border-radius:8px;
 text-decoration:none;
+margin-right:10px;
 font-weight:600;
 }
 
@@ -108,46 +106,48 @@ background:white;
 color:black;
 padding:40px 5%;
 text-align:center;
+gap:15px;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section-title{
 text-align:center;
-margin:60px 0 25px;
+margin:60px 0 30px;
 color:#d4a64a;
-font-size:34px;
+font-size:36px;
 }
 
 /* ABOUT */
 .about{
 display:flex;
 flex-wrap:wrap;
-padding:60px 5%;
 gap:30px;
+padding:60px 5%;
 align-items:center;
 }
 
 .about img{
-width:380px;
+width:400px;
 max-width:100%;
 border-radius:15px;
 }
 
-.about p{line-height:1.6;}
+.about div{flex:1;min-width:280px;}
 
-/* GRID */
-.courses,.teachers,.pricing,.faq{
+/* COURSES */
+.courses,.teachers,.testimonials,.pricing{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 padding:0 5%;
 }
 
-.card,.teacher,.price-card,.faq-item{
+.card,.teacher,.testimonial,.price-card{
 background:white;
 color:black;
 padding:20px;
 border-radius:15px;
+text-align:center;
 }
 
 .card img,.teacher img{
@@ -157,12 +157,10 @@ object-fit:cover;
 border-radius:10px;
 }
 
-/* PRICE */
 .price{
 font-size:30px;
 color:#d4a64a;
 margin:10px 0;
-text-align:center;
 }
 
 /* FORM */
@@ -179,8 +177,8 @@ input,select,textarea{
 width:100%;
 padding:12px;
 margin:10px 0;
-border-radius:8px;
 border:1px solid #ccc;
+border-radius:8px;
 }
 
 /* FOOTER */
@@ -188,10 +186,11 @@ footer{
 background:#011818;
 text-align:center;
 padding:30px;
+margin-top:40px;
 }
 
-/* WHATSAPP FLOAT */
-.whats{
+/* FLOAT */
+.whats-float{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -203,34 +202,44 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-size:28px;
+text-decoration:none;
+color:white;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
 
-.menu-toggle{display:block;color:white;}
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
 
 nav ul{
 display:none;
 flex-direction:column;
-position:absolute;
-top:65px;
-right:5%;
 background:#011818;
-padding:15px;
+position:absolute;
+top:60px;
+right:5%;
+padding:10px;
 border-radius:10px;
 }
 
-nav ul.show{
-display:flex;
-}
+.menu-toggle{display:block;}
 
 .hero{
 flex-direction:column;
 text-align:center;
 }
 
-.hero-text h1{font-size:34px;}
+.hero-text h1{font-size:36px;}
 }
 
 </style>
@@ -243,8 +252,8 @@ text-align:center;
 
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<nav>
-<ul id="menu">
+<nav id="menu">
+<ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#courses">Courses</a></li>
 <li><a href="#teachers">Teachers</a></li>
@@ -255,71 +264,61 @@ text-align:center;
 <a class="whatsapp-btn" href="https://wa.me/923437353621">WhatsApp</a>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<section class="hero fade" id="home">
 <div class="hero-text">
 <h1>Learn Quran <span>Online Easily</span></h1>
-<p>Professional Quran teachers for kids & adults with flexible timing.</p>
-
+<p>Professional male & female teachers available for kids and adults worldwide.</p>
 <a class="btn btn1" href="#contact">Enroll Now</a>
 <a class="btn btn2" href="https://wa.me/923437353621">WhatsApp</a>
 </div>
 
-<img src="teacher1.jpg">
+<img src="teacher1.jpg" alt="Teacher">
 </section>
 
-<!-- FEATURES -->
-<div class="features">
+<div class="features fade">
 <div>📖 <h4>Quran Reading</h4></div>
 <div>👨‍🏫 <h4>Expert Teachers</h4></div>
 <div>🕌 <h4>Islamic Courses</h4></div>
 <div>⏰ <h4>Flexible Time</h4></div>
 </div>
 
-<!-- ABOUT -->
-<h2 class="section-title">About Us</h2>
-<section class="about">
+<h2 class="section-title fade">About Us</h2>
+<section class="about fade">
 <img src="teacher2.jpg">
-<p>
-We provide high quality Quran education online with Tajweed, Qaida, and Islamic learning for all ages.
-</p>
+<div>
+<p>We provide professional Quran teaching with Tajweed, Qaida and full guidance for kids and adults online.</p>
+</div>
 </section>
 
-<!-- COURSES -->
-<h2 class="section-title" id="courses">Courses</h2>
-<div class="courses">
-<div class="card"><img src="qaida.jpg"><h3>Noorani Qaida</h3></div>
-<div class="card"><img src="reading.jpg"><h3>Quran Reading</h3></div>
+<h2 class="section-title fade" id="courses">Courses</h2>
+<div class="courses fade">
+<div class="card">
+<img src="qaida.jpg">
+<h3>Noorani Qaida</h3>
+</div>
+<div class="card">
+<img src="reading.jpg">
+<h3>Quran Reading</h3>
+</div>
 </div>
 
-<!-- TEACHERS -->
-<h2 class="section-title" id="teachers">Teachers</h2>
-<div class="teachers">
+<h2 class="section-title fade" id="teachers">Teachers</h2>
+<div class="teachers fade">
 <div class="teacher"><img src="teacher1.jpg"><h3>Male Teacher</h3></div>
 <div class="teacher"><img src="teacher2.jpg"><h3>Scholar</h3></div>
 <div class="teacher"><img src="teacher3.jpg"><h3>Female Teacher</h3></div>
 </div>
 
-<!-- PRICING -->
-<h2 class="section-title">Pricing</h2>
-<div class="pricing">
+<h2 class="section-title fade">Pricing</h2>
+<div class="pricing fade">
 <div class="price-card"><h3>Basic</h3><div class="price">$20</div></div>
 <div class="price-card"><h3>Standard</h3><div class="price">$35</div></div>
 <div class="price-card"><h3>Premium</h3><div class="price">$50</div></div>
 </div>
 
-<!-- FAQ -->
-<h2 class="section-title">FAQ</h2>
-<div class="faq">
-<div class="faq-item"><b>Is online Quran learning easy?</b><p>Yes, very easy for kids and adults.</p></div>
-<div class="faq-item"><b>Do you have female teachers?</b><p>Yes, we provide female teachers too.</p></div>
-<div class="faq-item"><b>What is timing?</b><p>Flexible timing available worldwide.</p></div>
-</div>
-
-<!-- CONTACT -->
-<h2 class="section-title" id="contact">Contact</h2>
-<div class="form">
-<form onsubmit="sendWA(event)">
+<h2 class="section-title fade" id="contact">Contact</h2>
+<div class="form fade">
+<form onsubmit="sendWhatsApp(event)">
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="text" id="number" placeholder="WhatsApp Number" required>
 <select id="course">
@@ -332,20 +331,20 @@ We provide high quality Quran education online with Tajweed, Qaida, and Islamic 
 </div>
 
 <footer>
-© 2026 Quran Academy
+© 2026 Quran Academy | All Rights Reserved
 </footer>
 
-<a class="whats" href="https://wa.me/923437353621">💬</a>
+<a class="whats-float" href="https://wa.me/923437353621">💬</a>
 
 <script>
 
-// MENU
+// menu toggle
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("show");
+document.getElementById("menu").classList.toggle("showMenu");
 }
 
-// WHATSAPP FORM
-function sendWA(e){
+// whatsapp form
+function sendWhatsApp(e){
 e.preventDefault();
 
 let name=document.getElementById("name").value;
@@ -354,13 +353,25 @@ let course=document.getElementById("course").value;
 let msg=document.getElementById("msg").value;
 
 let url="https://wa.me/923437353621?text="
-+"Name: "+name+"%0A"
-+"Number: "+number+"%0A"
-+"Course: "+course+"%0A"
++"Name: "+name+"%0a"
++"Number: "+number+"%0a"
++"Course: "+course+"%0a"
 +"Message: "+msg;
 
 window.open(url,"_blank");
 }
+
+// animation
+let elements=document.querySelectorAll(".fade");
+
+window.addEventListener("scroll",()=>{
+elements.forEach(el=>{
+let top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add("show");
+}
+});
+});
 
 </script>
 
